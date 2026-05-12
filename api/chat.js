@@ -1,4 +1,4 @@
-const GEMINI_KEY = process.env.GEMINI_API_KEY || 'AIzaSyB0UkSIQvA5Bik1q6L4XbZBDhIBCVcLXm0';
+const GEMINI_KEY = process.env.GEMINI_API_KEY || 'AIzaSyAqN0qg48cfBORkgCA6Qp0hAT2GT8UoauI';
 const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_KEY}`;
 
 const SYSTEM = `أنت مساعد ذكي لشركة TheShield، شركة أردنية متخصصة في حلول الشات بوت للمتاجر الأردنية.

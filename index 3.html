@@ -1,0 +1,1914 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TheShield — حلول الشات بوت للمتاجر الأردنية</title>
+
+  <!-- ===== SEO ===== -->
+  <meta name="description" content="TheShield — شركة أردنية متخصصة في حلول الشات بوت الذكي للمتاجر. مبنية على بحث أكاديمي من جامعة الشرق الأوسط. استجابة فورية، سهولة استخدام، وثقة تامة." />
+  <meta name="keywords" content="شات بوت, روبوت محادثة, متاجر أردنية, ذكاء اصطناعي, خدمة عملاء, TheShield, الأردن" />
+  <meta name="author" content="TheShield — يوسف جمال الحجوج" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://yalhjouj34-art.github.io/CHATBOT-RESEARCH/" />
+
+  <!-- ===== OPEN GRAPH (واتساب، فيسبوك، تويتر) ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yalhjouj34-art.github.io/CHATBOT-RESEARCH/" />
+  <meta property="og:title" content="TheShield — حلول الشات بوت للمتاجر الأردنية" />
+  <meta property="og:description" content="شركة أردنية متخصصة في روبوتات المحادثة الذكية. استجابة فورية 24/7، سهولة استخدام، وبناء الثقة مع عملائك." />
+  <meta property="og:image" content="https://yalhjouj34-art.github.io/CHATBOT-RESEARCH/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="ar_JO" />
+  <meta property="og:site_name" content="TheShield" />
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TheShield — حلول الشات بوت للمتاجر الأردنية" />
+  <meta name="twitter:description" content="شركة أردنية متخصصة في روبوتات المحادثة الذكية للمتاجر." />
+  <meta name="twitter:image" content="https://yalhjouj34-art.github.io/CHATBOT-RESEARCH/og-image.png" />
+
+  <!-- ===== FAVICON (SVG inline) ===== -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300e5b0'/%3E%3Cstop offset='100%25' stop-color='%230066ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%2307111f'/%3E%3Cpath d='M32 6 L54 16 L54 38 Q54 54 32 61 Q10 54 10 38 L10 16 Z' fill='none' stroke='url(%23g)' stroke-width='3' stroke-linejoin='round'/%3E%3Cpolyline points='20,33 29,44 46,24' fill='none' stroke='url(%23g)' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="shortcut icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300e5b0'/%3E%3Cstop offset='100%25' stop-color='%230066ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%2307111f'/%3E%3Cpath d='M32 6 L54 16 L54 38 Q54 54 32 61 Q10 54 10 38 L10 16 Z' fill='none' stroke='url(%23g)' stroke-width='3' stroke-linejoin='round'/%3E%3Cpolyline points='20,33 29,44 46,24' fill='none' stroke='url(%23g)' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <meta name="theme-color" content="#07111f" />
+  <meta name="apple-mobile-web-app-title" content="TheShield" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #0a1628;
+      --accent: #00c896;
+      --accent2: #0084ff;
+      --gold: #f5c842;
+      --surface: #0f2040;
+      --surface2: #162b4d;
+      --text: #e8f0fe;
+      --muted: #8ba3c7;
+      --border: rgba(0,200,150,0.18);
+      --radius: 16px;
+      --shadow: 0 8px 40px rgba(0,0,0,0.4);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: var(--primary);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ===== NOISE TEXTURE OVERLAY ===== */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ===== NAVBAR ===== */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(10,22,40,0.92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: white;
+      font-family: 'Tajawal', sans-serif;
+      letter-spacing: -1px;
+      box-shadow: 0 4px 20px rgba(0,200,150,0.3);
+    }
+
+    .logo-text {
+      font-family: 'Tajawal', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: white;
+      line-height: 1.1;
+    }
+
+    .logo-text span {
+      display: block;
+      font-size: 0.65rem;
+      font-weight: 400;
+      color: var(--accent);
+      letter-spacing: 0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: all 0.2s;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+      background: rgba(0,200,150,0.08);
+    }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--accent), var(--accent2)) !important;
+      color: white !important;
+      padding: 9px 20px !important;
+      font-weight: 700 !important;
+      box-shadow: 0 4px 15px rgba(0,200,150,0.25);
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(0,200,150,0.35) !important;
+      background: linear-gradient(135deg, var(--accent), var(--accent2)) !important;
+    }
+
+    /* ===== PAGE SYSTEM ===== */
+    .page { display: none; padding-top: 70px; min-height: 100vh; }
+    .page.active { display: block; }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: calc(100vh - 70px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      padding: 4rem 2rem;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 20%, rgba(0,200,150,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 80% at 80% 80%, rgba(0,132,255,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 40% at 20% 60%, rgba(245,200,66,0.05) 0%, transparent 50%);
+    }
+
+    /* Animated grid */
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,200,150,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,200,150,0.05) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: gridMove 20s linear infinite;
+      mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+    }
+
+    @keyframes gridMove {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(60px); }
+    }
+
+    .hero-content { position: relative; z-index: 2; max-width: 860px; }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0,200,150,0.1);
+      border: 1px solid rgba(0,200,150,0.3);
+      border-radius: 100px;
+      padding: 6px 18px;
+      font-size: 0.82rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      animation: fadeDown 0.6s ease both;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 8px; height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 2s ease infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+
+    .hero h1 {
+      font-family: 'Tajawal', sans-serif;
+      font-size: clamp(2.2rem, 6vw, 4.2rem);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+      animation: fadeDown 0.6s 0.1s ease both;
+    }
+
+    .hero h1 .accent { color: var(--accent); }
+    .hero h1 .accent2 { color: var(--accent2); }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 620px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.8;
+      animation: fadeDown 0.6s 0.2s ease both;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeDown 0.6s 0.3s ease both;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: white;
+      border: none;
+      padding: 14px 32px;
+      border-radius: 12px;
+      font-family: 'Cairo', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s;
+      box-shadow: 0 4px 20px rgba(0,200,150,0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0,200,150,0.4);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 14px 32px;
+      border-radius: 12px;
+      font-family: 'Cairo', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(0,200,150,0.05);
+    }
+
+    /* Stats Bar */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-top: 4rem;
+      animation: fadeUp 0.6s 0.5s ease both;
+    }
+
+    .stat-item {
+      background: var(--surface);
+      padding: 1.5rem;
+      text-align: center;
+      transition: background 0.2s;
+    }
+
+    .stat-item:hover { background: var(--surface2); }
+
+    .stat-num {
+      font-family: 'Tajawal', sans-serif;
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--accent);
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* ===== SECTIONS ===== */
+    .section {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-tag {
+      display: inline-block;
+      background: rgba(0,200,150,0.1);
+      border: 1px solid rgba(0,200,150,0.25);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 5px 16px;
+      border-radius: 100px;
+      margin-bottom: 1rem;
+      letter-spacing: 0.5px;
+    }
+
+    .section-title {
+      font-family: 'Tajawal', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 0.8rem;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ===== SERVICES GRID ===== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .service-card:hover {
+      border-color: rgba(0,200,150,0.35);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    }
+
+    .service-card:hover::before { opacity: 1; }
+
+    .service-icon {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .service-card h3 {
+      font-family: 'Tajawal', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    /* ===== TEAM CARDS ===== */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .team-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .team-card:hover {
+      border-color: rgba(0,200,150,0.35);
+      transform: translateY(-4px);
+    }
+
+    .team-avatar {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      font-family: 'Tajawal', sans-serif;
+      font-weight: 900;
+    }
+
+    .team-card h3 {
+      font-family: 'Tajawal', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    .team-card .role {
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .team-card .dept {
+      color: var(--muted);
+      font-size: 0.78rem;
+      margin-top: 0.3rem;
+    }
+
+    /* ===== ABOUT PAGE ===== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-visual {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 2.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-visual::before {
+      content: '';
+      position: absolute;
+      top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      background: radial-gradient(ellipse at center, rgba(0,200,150,0.06) 0%, transparent 60%);
+    }
+
+    .shield-big {
+      font-size: 5rem;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .about-metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .about-metric {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+    }
+
+    .about-metric .num {
+      font-family: 'Tajawal', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--accent);
+    }
+
+    .about-metric .label {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .about-text h2 {
+      font-family: 'Tajawal', sans-serif;
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .about-text p {
+      color: var(--muted);
+      line-height: 1.9;
+      margin-bottom: 1.2rem;
+      font-size: 0.95rem;
+    }
+
+    .values-list {
+      list-style: none;
+      margin-top: 1.5rem;
+    }
+
+    .values-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      font-size: 0.9rem;
+    }
+
+    .values-list li .check {
+      width: 24px; height: 24px;
+      background: rgba(0,200,150,0.15);
+      border: 1px solid rgba(0,200,150,0.3);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      flex-shrink: 0;
+      font-size: 0.7rem;
+    }
+
+    /* ===== RESEARCH RESULTS ===== */
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .research-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.8rem;
+      transition: all 0.3s;
+    }
+
+    .research-card:hover {
+      border-color: rgba(0,200,150,0.35);
+      transform: translateY(-3px);
+    }
+
+    .r-label { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.5rem; }
+    .r-h { font-family: 'Tajawal', sans-serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.8rem; }
+
+    .progress-bar {
+      background: rgba(255,255,255,0.08);
+      border-radius: 100px;
+      height: 8px;
+      overflow: hidden;
+      margin-bottom: 0.5rem;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: 100px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      transition: width 1s ease;
+    }
+
+    .r-vals {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+    }
+
+    .r-vals span { color: var(--accent); font-weight: 700; }
+    .r-vals em { color: var(--muted); font-style: normal; }
+
+    /* ===== CHATBOT PAGE ===== */
+    .chat-layout {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .chat-window {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .chat-header {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .chat-avatar {
+      width: 44px; height: 44px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+
+    .chat-header-info h3 {
+      font-family: 'Tajawal', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: white;
+    }
+
+    .chat-header-info p {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.75);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .online-dot {
+      width: 8px; height: 8px;
+      background: white;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    .chat-messages {
+      height: 440px;
+      overflow-y: auto;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      scroll-behavior: smooth;
+    }
+
+    .chat-messages::-webkit-scrollbar { width: 4px; }
+    .chat-messages::-webkit-scrollbar-track { background: transparent; }
+    .chat-messages::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+    .msg {
+      display: flex;
+      gap: 10px;
+      animation: fadeUp 0.3s ease;
+    }
+
+    .msg.user { flex-direction: row-reverse; }
+
+    .msg-bubble {
+      max-width: 75%;
+      padding: 0.8rem 1.1rem;
+      border-radius: 16px;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .msg.bot .msg-bubble {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 16px 16px 16px 4px;
+      color: var(--text);
+    }
+
+    .msg.user .msg-bubble {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: white;
+      border-radius: 16px 16px 4px 16px;
+    }
+
+    .msg-icon {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .msg.bot .msg-icon { background: rgba(0,200,150,0.15); }
+    .msg.user .msg-icon { background: rgba(0,132,255,0.15); }
+
+    .chat-input-area {
+      padding: 1.2rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      gap: 0.8rem;
+      background: var(--surface);
+    }
+
+    .chat-input {
+      flex: 1;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 16px;
+      color: var(--text);
+      font-family: 'Cairo', sans-serif;
+      font-size: 0.9rem;
+      outline: none;
+      resize: none;
+      transition: border 0.2s;
+    }
+
+    .chat-input:focus { border-color: rgba(0,200,150,0.4); }
+    .chat-input::placeholder { color: var(--muted); }
+
+    .send-btn {
+      width: 48px; height: 48px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.1rem;
+      transition: all 0.2s;
+      flex-shrink: 0;
+    }
+
+    .send-btn:hover { transform: scale(1.05); box-shadow: 0 4px 15px rgba(0,200,150,0.3); }
+    .send-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    .typing-dots {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      padding: 4px 0;
+    }
+
+    .typing-dots span {
+      width: 8px; height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: dot 1.2s ease infinite;
+    }
+
+    .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes dot {
+      0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+      40% { transform: scale(1); opacity: 1; }
+    }
+
+    /* Suggested questions */
+    .suggestions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0 1.2rem 1rem;
+    }
+
+    .suggestion-btn {
+      background: rgba(0,200,150,0.07);
+      border: 1px solid rgba(0,200,150,0.2);
+      color: var(--accent);
+      border-radius: 100px;
+      padding: 6px 14px;
+      font-size: 0.8rem;
+      font-family: 'Cairo', sans-serif;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .suggestion-btn:hover {
+      background: rgba(0,200,150,0.15);
+    }
+
+    /* ===== CONTACT PAGE ===== */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .contact-info h2 {
+      font-family: 'Tajawal', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info p {
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+
+    .contact-items {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .c-icon {
+      width: 42px; height: 42px;
+      border-radius: 10px;
+      background: rgba(0,200,150,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .c-text strong { display: block; font-size: 0.85rem; color: var(--text); }
+    .c-text small { color: var(--muted); font-size: 0.8rem; }
+
+    /* Form */
+    .contact-form {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2.5rem;
+    }
+
+    .contact-form h3 {
+      font-family: 'Tajawal', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group.full { grid-column: 1 / -1; }
+
+    .form-group label {
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      background: var(--surface2);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 11px 14px;
+      color: var(--text);
+      font-family: 'Cairo', sans-serif;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border 0.2s;
+      width: 100%;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: rgba(0,200,150,0.4);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 110px; }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+      color: var(--accent);
+    }
+
+    .form-success .checkmark { font-size: 3rem; margin-bottom: 1rem; }
+    .form-success h4 { font-family: 'Tajawal', sans-serif; font-size: 1.3rem; font-weight: 700; }
+    .form-success p { color: var(--muted); margin-top: 0.5rem; font-size: 0.9rem; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 3rem 2rem 1.5rem;
+      margin-top: 4rem;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-brand p {
+      color: var(--muted);
+      font-size: 0.85rem;
+      line-height: 1.7;
+      margin-top: 0.8rem;
+    }
+
+    .footer-col h4 {
+      font-family: 'Tajawal', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 0.5rem; }
+    .footer-col ul li a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+    .footer-col ul li a:hover { color: var(--accent); }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .uni-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 16px;
+    }
+
+    .uni-badge span {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    .uni-badge strong { display: block; color: var(--text); font-size: 0.82rem; }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .stats-bar { grid-template-columns: 1fr 1fr; }
+      .about-grid { grid-template-columns: 1fr; }
+      .contact-layout { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .stats-bar { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav>
+  <a class="nav-logo" href="#" onclick="showPage('home')" style="gap:10px">
+    <svg width="42" height="42" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
+      <defs>
+        <linearGradient id="ng" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#00e5b0"/>
+          <stop offset="100%" stop-color="#0066ff"/>
+        </linearGradient>
+      </defs>
+      <rect width="42" height="42" rx="10" fill="#07111f"/>
+      <path d="M21 4 L36 10 L36 24 Q36 34 21 39 Q6 34 6 24 L6 10 Z" fill="url(#ng)" opacity="0.12"/>
+      <path d="M21 4 L36 10 L36 24 Q36 34 21 39 Q6 34 6 24 L6 10 Z" fill="none" stroke="url(#ng)" stroke-width="1.8" stroke-linejoin="round"/>
+      <polyline points="12,22 19,30 31,14" fill="none" stroke="url(#ng)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div class="logo-text">
+      TheShield
+      <span>حلول الشات بوت</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#" onclick="showPage('home')" id="nav-home" class="active">الرئيسية</a></li>
+    <li><a href="#" onclick="showPage('about')" id="nav-about">عن الشركة</a></li>
+    <li><a href="#" onclick="showPage('services')" id="nav-services">خدماتنا</a></li>
+    <li><a href="#" onclick="showPage('team')" id="nav-team">فريق العمل</a></li>
+    <li><a href="#" onclick="showPage('chatbot')" id="nav-chatbot">المساعد الذكي</a></li>
+    <li><a href="#" onclick="showPage('contact')" id="nav-contact" class="nav-cta">تواصل معنا</a></li>
+  </ul>
+</nav>
+
+<!-- ===== HOME PAGE ===== -->
+<div class="page active" id="page-home">
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="hero-badge">مستوحى من بحث علمي أكاديمي أردني</div>
+      <h1>
+        حلول الشات بوت<br>
+        <span class="accent">الذكية</span> للمتاجر
+        <span class="accent2">الأردنية</span>
+      </h1>
+      <p>
+        TheShield تحوّل تجربة عملائك من خلال روبوتات محادثة ذكية مدعومة بالذكاء الاصطناعي —
+        مصممة خصيصاً للسوق الأردني، مبنية على أسس بحثية علمية.
+      </p>
+      <div class="hero-btns">
+        <a href="#" class="btn-primary" onclick="showPage('chatbot')">
+          🤖 جرّب المساعد الذكي
+        </a>
+        <a href="#" class="btn-outline" onclick="showPage('services')">
+          اكتشف خدماتنا ←
+        </a>
+      </div>
+
+      <div class="stats-bar" style="grid-template-columns:repeat(3,1fr)">
+        <div class="stat-item">
+          <span class="stat-num">74.1%</span>
+          <div class="stat-label">ارتباط سهولة الاستخدام برضا العملاء</div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">3.87</span>
+          <div class="stat-label">معدل رضا العملاء الكلي (من 5)</div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">250</span>
+          <div class="stat-label">مستجيباً في الدراسة البحثية</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Services -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-tag">خدماتنا الرئيسية</div>
+      <h2 class="section-title">لماذا TheShield لمتجرك؟</h2>
+      <p class="section-subtitle">نقدم حلولاً متكاملة مبنية على أسس علمية لضمان تجربة عملاء استثنائية</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon" style="background:rgba(0,200,150,0.12)">🤝</div>
+        <h3>سهولة الاستخدام المُثلى</h3>
+        <p>بوتاتنا مصممة بواجهة بسيطة وبديهية تضمن تجربة سلسة لكل عميل — الأعلى تأثيراً على الرضا (β=0.312)</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background:rgba(0,132,255,0.12)">⚡</div>
+        <h3>استجابة فورية 24/7</h3>
+        <p>توافر مستمر بلا توقف يضمن خدمة عملائك في أي وقت — التوافر الفوري حقق r=0.724 في دراستنا</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background:rgba(245,200,66,0.12)">🔐</div>
+        <h3>ثقة وأمان تام</h3>
+        <p>نحمي بيانات عملائك بمعايير أمان عالية تبني الثقة وتزيد الولاء — مثبت بحثياً بـ β=0.194</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background:rgba(200,0,200,0.12)">💬</div>
+        <h3>جودة استجابة عالية</h3>
+        <p>إجابات دقيقة وذكية تفهم احتياجات العملاء وتعالج استفساراتهم بكفاءة عالية</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background:rgba(255,100,0,0.12)">📊</div>
+        <h3>تحليلات وتقارير</h3>
+        <p>لوحة تحكم شاملة توفر إحصاءات تفصيلية عن تفاعلات العملاء ومعدلات الرضا</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background:rgba(0,200,150,0.12)">🇯🇴</div>
+        <h3>مخصص للسوق الأردني</h3>
+        <p>مصمم خصيصاً لطبيعة وثقافة المتاجر الأردنية باللغة العربية ودعم اللهجة المحلية</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Banner -->
+  <section style="background:linear-gradient(135deg,rgba(0,200,150,0.08),rgba(0,132,255,0.08));border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:4rem 2rem;text-align:center;">
+    <div style="max-width:700px;margin:0 auto;">
+      <div class="section-tag">مستند علمياً</div>
+      <h2 class="section-title">مبني على بحث أكاديمي حقيقي</h2>
+      <p style="color:var(--muted);line-height:1.8;margin-bottom:2rem;">
+        TheShield ليست مجرد شركة تقنية — هي تجسيد عملي لنتائج بحث أكاديمي متخصص
+        أجرته جامعة الشرق الأوسط لدراسة أثر روبوتات المحادثة على رضا العملاء في السوق الأردني.
+        R² = 0.621 | F = 47.83 | p < 0.001
+      </p>
+      <a href="#" class="btn-primary" onclick="showPage('about')">اقرأ قصتنا كاملة</a>
+    </div>
+  </section>
+</div>
+
+<!-- ===== ABOUT PAGE ===== -->
+<div class="page" id="page-about">
+  <section class="section" style="max-width:1100px">
+    <div class="section-header">
+      <div class="section-tag">من نحن</div>
+      <h2 class="section-title">قصة TheShield</h2>
+      <p class="section-subtitle">رحلة من البحث الأكاديمي إلى الحلول التقنية الواقعية</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-visual">
+        <svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto 1rem">
+          <defs>
+            <linearGradient id="ag" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#00e5b0"/>
+              <stop offset="100%" stop-color="#0066ff"/>
+            </linearGradient>
+            <linearGradient id="ag2" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#00e5b0" stop-opacity="0.13"/>
+              <stop offset="100%" stop-color="#0066ff" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <ellipse cx="80" cy="90" rx="65" ry="70" fill="url(#ag2)"/>
+          <path d="M80 18 L132 42 L132 96 Q132 130 80 148 Q28 130 28 96 L28 42 Z"
+            fill="url(#ag2)" stroke="url(#ag)" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M80 32 L120 52 L120 94 Q120 122 80 137 Q40 122 40 94 L40 52 Z"
+            fill="none" stroke="url(#ag)" stroke-width="1" stroke-linejoin="round" opacity="0.22"/>
+          <polyline points="46,88 70,118 116,64"
+            fill="none" stroke="url(#ag)" stroke-width="10"
+            stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3 style="font-family:'Tajawal',sans-serif;font-size:1.8rem;font-weight:900;margin-bottom:0.5rem">TheShield</h3>
+        <p style="color:var(--muted);font-size:0.85rem">حلول الشات بوت للمتاجر الأردنية</p>
+        <div class="about-metrics">
+          <div class="about-metric">
+            <div class="num">2024</div>
+            <div class="label">سنة التأسيس</div>
+          </div>
+          <div class="about-metric">
+            <div class="num">4</div>
+            <div class="label">أعضاء الفريق</div>
+          </div>
+          <div class="about-metric">
+            <div class="num">250+</div>
+            <div class="label">مستجيب بحثي</div>
+          </div>
+          <div class="about-metric">
+            <div class="num">62.1%</div>
+            <div class="label">R² الدراسة</div>
+          </div>
+        </div>
+
+        <!-- University Badge -->
+        <div class="uni-badge" style="margin-top:1.5rem">
+          <span style="font-size:2rem">🎓</span>
+          <span>
+            <strong>جامعة الشرق الأوسط</strong>
+            كلية الأعمال — التجارة الإلكترونية
+          </span>
+        </div>
+      </div>
+
+      <div class="about-text">
+        <h2>لماذا أسسنا TheShield؟</h2>
+        <p>
+          وُلدت فكرة TheShield من رحم بحث علمي أكاديمي رصين أجرناه في جامعة الشرق الأوسط
+          بعنوان <strong style="color:var(--accent)">"أثر استخدام روبوتات المحادثة على رضا العملاء في المتاجر الأردنية"</strong>.
+        </p>
+        <p>
+          اكتشفنا خلال البحث أن المتاجر الأردنية تعاني من فجوة حقيقية — العملاء يريدون تجربة رقمية
+          سلسة وفورية، لكن معظم المتاجر تفتقر للأدوات المناسبة. هنا قررنا أن نكون الجسر.
+        </p>
+        <p>
+          نتائج بحثنا أظهرت أن سهولة الاستخدام والتوافر الفوري هما أكثر العوامل تأثيراً على رضا العملاء.
+          بنينا TheShield خصيصاً لتحقيق هذين المعيارين بأعلى مستوى.
+        </p>
+
+        <ul class="values-list">
+          <li>
+            <div class="check">✓</div>
+            <div>
+              <strong style="font-size:0.92rem">مستند علمياً</strong>
+              <div style="color:var(--muted);font-size:0.82rem">كل ميزة في منتجاتنا مدعومة بنتائج بحثية موثقة</div>
+            </div>
+          </li>
+          <li>
+            <div class="check">✓</div>
+            <div>
+              <strong style="font-size:0.92rem">مصمم أردنياً</strong>
+              <div style="color:var(--muted);font-size:0.82rem">نفهم ثقافة وطبيعة السوق الأردني من الداخل</div>
+            </div>
+          </li>
+          <li>
+            <div class="check">✓</div>
+            <div>
+              <strong style="font-size:0.92rem">شفاف ومُثبَت</strong>
+              <div style="color:var(--muted);font-size:0.82rem">أرقامنا حقيقية ونتائجنا قابلة للقياس</div>
+            </div>
+          </li>
+          <li>
+            <div class="check">✓</div>
+            <div>
+              <strong style="font-size:0.92rem">دعم مستمر</strong>
+              <div style="color:var(--muted);font-size:0.82rem">فريقنا متاح لمساعدة عملائنا في كل خطوة</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Research Results Section -->
+    <div style="margin-top:5rem">
+      <div class="section-header">
+        <div class="section-tag">نتائج البحث</div>
+        <h2 class="section-title">الأدلة العلمية خلف TheShield</h2>
+        <p class="section-subtitle">نتائج دراستنا على 250 مستجيباً من المتاجر الأردنية</p>
+      </div>
+
+      <div class="research-grid">
+        <div class="research-card">
+          <div class="r-label">H1 — الفرضية الأولى</div>
+          <div class="r-h">سهولة الاستخدام ← رضا العملاء</div>
+          <div class="progress-bar"><div class="progress-fill" style="width:74.1%"></div></div>
+          <div class="r-vals">
+            <span>r = 0.741</span>
+            <em>β = 0.312 ✅ (الأعلى تأثيراً)</em>
+          </div>
+        </div>
+        <div class="research-card">
+          <div class="r-label">H4 — الفرضية الرابعة</div>
+          <div class="r-h">التوافر الفوري ← رضا العملاء</div>
+          <div class="progress-bar"><div class="progress-fill" style="width:72.4%"></div></div>
+          <div class="r-vals">
+            <span>r = 0.724</span>
+            <em>β = 0.289 ✅</em>
+          </div>
+        </div>
+        <div class="research-card">
+          <div class="r-label">H2 — الفرضية الثانية</div>
+          <div class="r-h">جودة الاستجابة ← رضا العملاء</div>
+          <div class="progress-bar"><div class="progress-fill" style="width:68.3%"></div></div>
+          <div class="r-vals">
+            <span>r = 0.683</span>
+            <em>β = 0.278 ✅</em>
+          </div>
+        </div>
+        <div class="research-card">
+          <div class="r-label">H3 — الفرضية الثالثة</div>
+          <div class="r-h">الثقة والأمان ← رضا العملاء</div>
+          <div class="progress-bar"><div class="progress-fill" style="width:61.2%"></div></div>
+          <div class="r-vals">
+            <span>r = 0.612</span>
+            <em>β = 0.194 ✅</em>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem;text-align:center">
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.2rem">
+          <div style="font-size:1.5rem;font-weight:900;color:var(--accent);font-family:'Tajawal',sans-serif">R² = 0.621</div>
+          <div style="color:var(--muted);font-size:0.8rem;margin-top:4px">قدرة النموذج التفسيرية</div>
+        </div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.2rem">
+          <div style="font-size:1.5rem;font-weight:900;color:var(--accent2);font-family:'Tajawal',sans-serif">F = 47.83</div>
+          <div style="color:var(--muted);font-size:0.8rem;margin-top:4px">قيمة F للنموذج</div>
+        </div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.2rem">
+          <div style="font-size:1.5rem;font-weight:900;color:var(--gold);font-family:'Tajawal',sans-serif">p &lt; 0.001</div>
+          <div style="color:var(--muted);font-size:0.8rem;margin-top:4px">مستوى الدلالة الإحصائية</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== SERVICES PAGE ===== -->
+<div class="page" id="page-services">
+  <section class="section">
+    <div class="section-header">
+      <div class="section-tag">خدماتنا</div>
+      <h2 class="section-title">حلول الشات بوت المتكاملة</h2>
+      <p class="section-subtitle">باقات مصممة لكل حجم متجر — من المحلات الصغيرة حتى المتاجر الكبرى</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon" style="background:rgba(0,200,150,0.12)">🤖</div>
+        <h3>بوت خدمة العملاء الأساسي</h3>
+        <p>روبوت محادثة ذكي يرد على أسئلة العملاء الشائعة، يوفر معلومات المنتجات، ويعالج الاستفسارات الأساسية على مدار الساعة.</p>
+        <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)">
+          <div style="color:var(--accent);font-size:0.82rem;font-weight:700">✓ ردود فورية &nbsp; ✓ عربي/إنجليزي &nbsp; ✓ 24/7</div>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background:rgba(0,132,255,0.12)">🛒</div>
+        <h3>بوت المبيعات والتجارة</h3>
+        <p>يساعد العملاء في اختيار المنتجات المناسبة، يقدم توصيات مخصصة، ويكمل عمليات الشراء بسهولة داخل المحادثة.</p>
+        <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)">
+          <div style="color:var(--accent);font-size:0.82rem;font-weight:700">✓ توصيات ذكية &nbsp; ✓ دمج مع المتجر &nbsp; ✓ تتبع الطلبات</div>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background:rgba(245,200,66,0.12)">📦</div>
+        <h3>بوت تتبع الطلبات</h3>
+        <p>يتيح للعملاء تتبع طلباتهم لحظياً، استقبال إشعارات التوصيل، وحل مشكلات الشحن بشكل آلي فوري.</p>
+        <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)">
+          <div style="color:var(--accent);font-size:0.82rem;font-weight:700">✓ تتبع حي &nbsp; ✓ إشعارات تلقائية &nbsp; ✓ تكامل مع الشحن</div>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background:rgba(200,0,200,0.12)">📊</div>
+        <h3>لوحة التحليلات الذكية</h3>
+        <p>تقارير تفصيلية عن تفاعلات العملاء، أكثر الأسئلة تكراراً، معدلات الرضا، وتوصيات لتحسين الأداء باستمرار.</p>
+        <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)">
+          <div style="color:var(--accent);font-size:0.82rem;font-weight:700">✓ تقارير يومية &nbsp; ✓ مؤشرات الرضا &nbsp; ✓ اقتراحات AI</div>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background:rgba(255,100,0,0.12)">🔗</div>
+        <h3>التكامل متعدد المنصات</h3>
+        <p>دمج سلس مع واتساب، إنستغرام، الموقع الإلكتروني، وتطبيق الجوال — عملاؤك أينما كانوا، بوتك حاضر معهم.</p>
+        <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)">
+          <div style="color:var(--accent);font-size:0.82rem;font-weight:700">✓ واتساب &nbsp; ✓ إنستغرام &nbsp; ✓ الموقع &nbsp; ✓ التطبيق</div>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background:rgba(0,200,150,0.12)">⚙️</div>
+        <h3>التخصيص والتدريب</h3>
+        <p>نُدرّب البوت على منتجاتك وأسلوب متجرك تحديداً — يتحدث بنبرة علامتك التجارية ويعكس شخصيتها.</p>
+        <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)">
+          <div style="color:var(--accent);font-size:0.82rem;font-weight:700">✓ تدريب مخصص &nbsp; ✓ نبرة علامتك &nbsp; ✓ تحديث دوري</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pricing Teaser -->
+    <div style="margin-top:4rem;background:linear-gradient(135deg,rgba(0,200,150,0.08),rgba(0,132,255,0.08));border:1px solid var(--border);border-radius:20px;padding:3rem;text-align:center">
+      <h3 style="font-family:'Tajawal',sans-serif;font-size:1.6rem;font-weight:900;margin-bottom:0.8rem">مهتم بخدماتنا؟</h3>
+      <p style="color:var(--muted);margin-bottom:2rem;font-size:0.95rem">تواصل معنا اليوم واحصل على استشارة مجانية مخصصة لمتجرك</p>
+      <a href="#" class="btn-primary" onclick="showPage('contact')">احصل على استشارة مجانية</a>
+    </div>
+  </section>
+</div>
+
+<!-- ===== TEAM PAGE ===== -->
+<div class="page" id="page-team">
+  <section class="section">
+    <div class="section-header">
+      <div class="section-tag">فريق العمل</div>
+      <h2 class="section-title">العقول خلف TheShield</h2>
+      <p class="section-subtitle">فريق من الباحثين الأكاديميين والمتخصصين في التجارة الإلكترونية</p>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar" style="background:linear-gradient(135deg,rgba(0,200,150,0.2),rgba(0,200,150,0.05));border:2px solid rgba(0,200,150,0.25)">أ</div>
+        <h3>أمل بسام القيم</h3>
+        <div class="role">باحثة متخصصة</div>
+        <div class="dept">قسم الأعمال والتجارة الإلكترونية</div>
+        <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)">
+          <div style="font-size:0.78rem;color:var(--muted);line-height:1.6">تحليل بيانات | رضا العملاء | تجربة المستخدم</div>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar" style="background:linear-gradient(135deg,rgba(0,132,255,0.2),rgba(0,132,255,0.05));border:2px solid rgba(0,132,255,0.25)">آ</div>
+        <h3>آية محمود النوافلة</h3>
+        <div class="role">باحثة متخصصة</div>
+        <div class="dept">قسم الأعمال والتجارة الإلكترونية</div>
+        <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)">
+          <div style="font-size:0.78rem;color:var(--muted);line-height:1.6">التجارة الإلكترونية | تحليل إحصائي | SPSS</div>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar" style="background:linear-gradient(135deg,rgba(245,200,66,0.2),rgba(245,200,66,0.05));border:2px solid rgba(245,200,66,0.25)">ي</div>
+        <h3>يوسف جمال الحجوج</h3>
+        <div class="role">باحث ومطور</div>
+        <div class="dept">قسم الأعمال والتجارة الإلكترونية</div>
+        <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)">
+          <div style="font-size:0.78rem;color:var(--muted);line-height:1.6">تطوير الويب | الذكاء الاصطناعي | بوتات المحادثة</div>
+        </div>
+      </div>
+
+      <div class="team-card" style="border-color:rgba(0,200,150,0.25);background:linear-gradient(135deg,var(--surface),rgba(0,200,150,0.04))">
+        <div class="team-avatar" style="background:linear-gradient(135deg,rgba(0,200,150,0.3),rgba(0,132,255,0.15));border:2px solid rgba(0,200,150,0.4)">د</div>
+        <h3>د. محمد محمود الزعبي</h3>
+        <div class="role" style="color:var(--gold)">المشرف الأكاديمي</div>
+        <div class="dept">كلية الأعمال — جامعة الشرق الأوسط</div>
+        <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)">
+          <div style="font-size:0.78rem;color:var(--muted);line-height:1.6">الإشراف البحثي | إدارة الأعمال | التجارة الإلكترونية</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- University Section -->
+    <div style="margin-top:4rem;background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:2.5rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap">
+      <div style="font-size:4rem">🎓</div>
+      <div style="flex:1;min-width:240px">
+        <h3 style="font-family:'Tajawal',sans-serif;font-size:1.3rem;font-weight:900;margin-bottom:0.5rem">جامعة الشرق الأوسط</h3>
+        <p style="color:var(--muted);font-size:0.9rem;line-height:1.7">
+          كلية الأعمال — قسم الأعمال والتجارة الإلكترونية<br>
+          بحث مشروع التخرج: أثر استخدام روبوتات المحادثة على رضا العملاء في المتاجر الأردنية
+        </p>
+      </div>
+      <div style="text-align:center">
+        <div style="font-size:1.5rem;font-weight:900;color:var(--accent);font-family:'Tajawal',sans-serif">2026</div>
+        <div style="font-size:0.75rem;color:var(--muted)">سنة البحث</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== CHATBOT PAGE ===== -->
+<div class="page" id="page-chatbot">
+  <section class="section" style="max-width:900px">
+    <div class="section-header">
+      <div class="section-tag">مدعوم بـ Gemini AI</div>
+      <h2 class="section-title">المساعد الذكي لـ TheShield</h2>
+      <p class="section-subtitle">اسأل عن خدماتنا، حلول الشات بوت، أو أي شيء يتعلق بتحسين تجربة عملاء متجرك</p>
+    </div>
+
+    <div class="chat-layout" style="padding:0">
+      <div class="chat-window">
+        <div class="chat-header">
+          <div class="chat-avatar">🤖</div>
+          <div class="chat-header-info">
+            <h3>مساعد TheShield الذكي</h3>
+            <p><span class="online-dot"></span> متصل الآن • مدعوم بـ Google Gemini AI</p>
+          </div>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+          <div class="msg bot">
+            <div class="msg-icon">🛡️</div>
+            <div class="msg-bubble">
+              مرحباً بك في TheShield! 👋<br><br>
+              أنا مساعدك الذكي، هنا لأساعدك في كل ما يتعلق بحلول الشات بوت للمتاجر الأردنية.
+              يمكنني الإجابة على أسئلتك عن خدماتنا، نتائج أبحاثنا، أو كيف يمكننا تحسين تجربة عملاء متجرك.
+              <br><br>بماذا يمكنني مساعدتك؟ 😊
+            </div>
+          </div>
+        </div>
+
+        <div class="suggestions" id="suggestions">
+          <button class="suggestion-btn" onclick="sendSuggestion('ما هي خدمات TheShield؟')">ما هي خدماتكم؟</button>
+          <button class="suggestion-btn" onclick="sendSuggestion('كيف يمكن للشات بوت تحسين مبيعات متجري؟')">كيف يحسّن الشات بوت مبيعاتي؟</button>
+          <button class="suggestion-btn" onclick="sendSuggestion('ما هي نتائج البحث الأكاديمي الخاص بكم؟')">نتائج البحث الأكاديمي</button>
+          <button class="suggestion-btn" onclick="sendSuggestion('كم تكلفة خدماتكم؟')">ما أسعاركم؟</button>
+        </div>
+
+        <div class="chat-input-area">
+          <textarea
+            class="chat-input"
+            id="chatInput"
+            placeholder="اكتب سؤالك هنا..."
+            rows="1"
+            onkeydown="handleKey(event)"
+            oninput="autoResize(this)"
+          ></textarea>
+          <button class="send-btn" id="sendBtn" onclick="sendMessage()">
+            ➤
+          </button>
+        </div>
+      </div>
+
+      <p style="text-align:center;color:var(--muted);font-size:0.78rem;margin-top:1rem">
+        🔐 مشغّل بـ Google Gemini AI — المحادثات محمية وآمنة
+      </p>
+    </div>
+  </section>
+</div>
+
+<!-- ===== CONTACT PAGE ===== -->
+<div class="page" id="page-contact">
+  <section class="section">
+    <div class="section-header">
+      <div class="section-tag">تواصل معنا</div>
+      <h2 class="section-title">نحن هنا لمساعدتك</h2>
+      <p class="section-subtitle">أرسل لنا رسالتك وسنرد عليك خلال 24 ساعة</p>
+    </div>
+
+    <div class="contact-layout">
+      <div class="contact-info">
+        <h2>هل أنت مهتم؟<br>تواصل معنا الآن</h2>
+        <p>
+          سواء كنت تريد معرفة المزيد عن خدماتنا، تحتاج استشارة مجانية،
+          أو تريد الشراكة معنا — فريقنا مستعد للمساعدة.
+        </p>
+
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="c-icon">📧</div>
+            <div class="c-text">
+              <strong>البريد الإلكتروني</strong>
+              <small>yalhjouj34@gmail.com</small>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="c-icon">📍</div>
+            <div class="c-text">
+              <strong>الموقع</strong>
+              <small>عمان، المملكة الأردنية الهاشمية</small>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="c-icon">🎓</div>
+            <div class="c-text">
+              <strong>الانتساب الأكاديمي</strong>
+              <small>جامعة الشرق الأوسط — كلية الأعمال</small>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="c-icon">⏰</div>
+            <div class="c-text">
+              <strong>وقت الاستجابة</strong>
+              <small>خلال 24 ساعة في أيام العمل</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3>أرسل رسالتك</h3>
+        <div id="formContent">
+          <form id="contactForm" action="https://formspree.io/f/mnjwowvk" method="POST" onsubmit="submitForm(event)">
+            <div class="form-grid">
+              <div class="form-group">
+                <label>الاسم الكامل *</label>
+                <input type="text" name="name" placeholder="اسمك الكامل" required />
+              </div>
+              <div class="form-group">
+                <label>البريد الإلكتروني *</label>
+                <input type="email" name="email" placeholder="بريدك@مثال.com" required />
+              </div>
+              <div class="form-group">
+                <label>رقم الهاتف</label>
+                <input type="tel" name="phone" placeholder="+962 7X XXX XXXX" />
+              </div>
+              <div class="form-group">
+                <label>اسم المتجر / الشركة</label>
+                <input type="text" name="company" placeholder="اسم متجرك أو شركتك" />
+              </div>
+              <div class="form-group full">
+                <label>نوع الخدمة المطلوبة</label>
+                <select name="service">
+                  <option value="">اختر الخدمة...</option>
+                  <option value="basic">بوت خدمة العملاء الأساسي</option>
+                  <option value="sales">بوت المبيعات والتجارة</option>
+                  <option value="tracking">بوت تتبع الطلبات</option>
+                  <option value="analytics">لوحة التحليلات الذكية</option>
+                  <option value="multiplatform">التكامل متعدد المنصات</option>
+                  <option value="custom">حل مخصص</option>
+                  <option value="consult">استشارة مجانية فقط</option>
+                </select>
+              </div>
+              <div class="form-group full">
+                <label>رسالتك *</label>
+                <textarea name="message" placeholder="اكتب تفاصيل احتياجاتك هنا..." required></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn-primary" style="width:100%;justify-content:center;margin-top:0.5rem" id="submitBtn">
+              إرسال الرسالة ✉️
+            </button>
+          </form>
+        </div>
+        <div class="form-success" id="formSuccess">
+          <div class="checkmark">✅</div>
+          <h4>تم الإرسال بنجاح!</h4>
+          <p>شكراً لتواصلك معنا. سيرد فريق TheShield على رسالتك خلال 24 ساعة على البريد الذي أدخلته.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo" style="margin-bottom:0.8rem;gap:10px">
+        <svg width="42" height="42" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
+          <defs>
+            <linearGradient id="fg" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#00e5b0"/>
+              <stop offset="100%" stop-color="#0066ff"/>
+            </linearGradient>
+          </defs>
+          <rect width="42" height="42" rx="10" fill="#07111f"/>
+          <path d="M21 4 L36 10 L36 24 Q36 34 21 39 Q6 34 6 24 L6 10 Z" fill="url(#fg)" opacity="0.12"/>
+          <path d="M21 4 L36 10 L36 24 Q36 34 21 39 Q6 34 6 24 L6 10 Z" fill="none" stroke="url(#fg)" stroke-width="1.8" stroke-linejoin="round"/>
+          <polyline points="12,22 19,30 31,14" fill="none" stroke="url(#fg)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="logo-text">
+          TheShield
+          <span>حلول الشات بوت</span>
+        </div>
+      </div>
+      <p>
+        شركة متخصصة في حلول الشات بوت للمتاجر الأردنية،
+        مستوحاة من بحث أكاديمي رصين أجرته جامعة الشرق الأوسط.
+      </p>
+      <div class="uni-badge" style="margin-top:1.2rem;display:inline-flex">
+        <span style="font-size:1.3rem">🎓</span>
+        <span>
+          <strong>جامعة الشرق الأوسط</strong>
+          كلية الأعمال
+        </span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>الشركة</h4>
+      <ul>
+        <li><a href="#" onclick="showPage('home')">الرئيسية</a></li>
+        <li><a href="#" onclick="showPage('about')">عن TheShield</a></li>
+        <li><a href="#" onclick="showPage('team')">فريق العمل</a></li>
+        <li><a href="#" onclick="showPage('contact')">تواصل معنا</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>الخدمات</h4>
+      <ul>
+        <li><a href="#" onclick="showPage('services')">بوت خدمة العملاء</a></li>
+        <li><a href="#" onclick="showPage('services')">بوت المبيعات</a></li>
+        <li><a href="#" onclick="showPage('services')">تتبع الطلبات</a></li>
+        <li><a href="#" onclick="showPage('services')">التحليلات الذكية</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>المساعد الذكي</h4>
+      <ul>
+        <li><a href="#" onclick="showPage('chatbot')">جرّب الشات بوت</a></li>
+        <li><a href="#" onclick="showPage('about')">البحث الأكاديمي</a></li>
+        <li><a href="#" onclick="showPage('contact')">احصل على استشارة</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 TheShield — جميع الحقوق محفوظة</span>
+    <span>مبني بحب في الأردن 🇯🇴 | جامعة الشرق الأوسط</span>
+  </div>
+</footer>
+
+<script>
+// ===== PAGE NAVIGATION =====
+function showPage(pageId) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+
+  const page = document.getElementById('page-' + pageId);
+  if (page) page.classList.add('active');
+
+  const navLink = document.getElementById('nav-' + pageId);
+  if (navLink) navLink.classList.add('active');
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  return false;
+}
+
+// ===== AI CHATBOT — via Vercel API proxy =====
+let conversationHistory = [];
+
+async function sendMessage() {
+  const input = document.getElementById('chatInput');
+  const msg = input.value.trim();
+  if (!msg) return;
+
+  addMessage(msg, 'user');
+  input.value = '';
+  autoResize(input);
+
+  document.getElementById('suggestions').style.display = 'none';
+  document.getElementById('sendBtn').disabled = true;
+
+  const typingId = showTyping();
+
+  try {
+    conversationHistory.push({ role: 'user', parts: [{ text: msg }] });
+
+    const response = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messages: conversationHistory })
+    });
+
+    if (!response.ok) {
+      const err = await response.json().catch(() => ({}));
+      throw new Error(err.error || 'Server error ' + response.status);
+    }
+
+    const data = await response.json();
+    removeTyping(typingId);
+
+    if (data.reply) {
+      conversationHistory.push({ role: 'model', parts: [{ text: data.reply }] });
+      addMessage(data.reply, 'bot');
+    } else {
+      throw new Error('no reply');
+    }
+
+  } catch (err) {
+    removeTyping(typingId);
+    console.error('Chat error:', err);
+    addMessage('عذراً، حدث خطأ مؤقت. حاول مرة ثانية. 🔄', 'bot');
+    conversationHistory.pop();
+  }
+
+  document.getElementById('sendBtn').disabled = false;
+}
+
+function addMessage(text, type) {
+  const container = document.getElementById('chatMessages');
+  const div = document.createElement('div');
+  div.className = `msg ${type}`;
+  div.innerHTML = `
+    <div class="msg-icon">${type === 'bot' ? '🛡️' : '👤'}</div>
+    <div class="msg-bubble">${text.replace(/\n/g, '<br>')}</div>
+  `;
+  container.appendChild(div);
+  container.scrollTop = container.scrollHeight;
+}
+
+function showTyping() {
+  const container = document.getElementById('chatMessages');
+  const id = 'typing-' + Date.now();
+  const div = document.createElement('div');
+  div.className = 'msg bot';
+  div.id = id;
+  div.innerHTML = `
+    <div class="msg-icon">🛡️</div>
+    <div class="msg-bubble">
+      <div class="typing-dots">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  `;
+  container.appendChild(div);
+  container.scrollTop = container.scrollHeight;
+  return id;
+}
+
+function removeTyping(id) {
+  const el = document.getElementById(id);
+  if (el) el.remove();
+}
+
+function sendSuggestion(text) {
+  document.getElementById('chatInput').value = text;
+  sendMessage();
+}
+
+function handleKey(e) {
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();
+    sendMessage();
+  }
+}
+
+function autoResize(el) {
+  el.style.height = 'auto';
+  el.style.height = Math.min(el.scrollHeight, 120) + 'px';
+}
+
+// ===== CONTACT FORM =====
+async function submitForm(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  btn.textContent = 'جارٍ الإرسال...';
+  btn.disabled = true;
+
+  const form = document.getElementById('contactForm');
+
+  // نجمع البيانات كـ JSON مش FormData عشان يشتغل مع Formspree
+  const payload = {
+    name: form.querySelector('[name="name"]').value,
+    email: form.querySelector('[name="email"]').value,
+    phone: form.querySelector('[name="phone"]').value,
+    company: form.querySelector('[name="company"]').value,
+    service: form.querySelector('[name="service"]').value,
+    message: form.querySelector('[name="message"]').value,
+  };
+
+  try {
+    const res = await fetch('https://formspree.io/f/mnjwowvk', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+
+    const result = await res.json();
+
+    if (res.ok && result.ok !== false) {
+      document.getElementById('formContent').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    } else {
+      console.error('Formspree error:', result);
+      btn.textContent = 'حدث خطأ، حاول مرة أخرى';
+      btn.disabled = false;
+    }
+  } catch (err) {
+    console.error('Fetch error:', err);
+    btn.textContent = 'حدث خطأ في الاتصال، حاول مرة أخرى';
+    btn.disabled = false;
+  }
+}
+</script>
+</body>
+</html>
